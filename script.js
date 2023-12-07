@@ -187,7 +187,33 @@ let createPageElements = () => {
   divContent.appendChild(toDown);
 }
 
+// timer clock
+btnStartQuiz.addEventListener("click", clockTimer);
+let displayClock = document.getElementById("timer_count");
 
+let secondClock=60;
+function clockTimer(){
+
+let timer = setInterval(function() {
+  displayClock.innerHTML="";
+  
+  let clock= document.createElement("div");
+  
+  secondClock--;
+  
+  console.log(secondClock);
+  clock.appendChild(document.createTextNode(secondClock));
+  displayClock.appendChild(clock);
+  
+
+  if (secondClock === 0) {
+    clearInterval(timer);
+    console.log("Time's up!");
+
+  }
+
+}, 1000);
+}
 
 // funzione per il quiz
 let countQuest = document.getElementById("count_questions");
@@ -217,7 +243,7 @@ let branchmark = () => {
 
   stepButton.addEventListener("click", verifyAnswer);
   stepButton.addEventListener("click", branchmark);
-
+  stepButton.addEventListener("click", clockTimer);
 
 
 // display questions count
@@ -234,34 +260,3 @@ countQuest.appendChild(questRemaning);
 
 // branchmark();
 
-btnStartQuiz.addEventListener("click", clockTimer);
-let displayClock = document.getElementById("timer_count");
-
-function clockTimer(){
-
-let secondClock =;
-
-secondClock = 60;
-
-let timer = setInterval(function() {
-  displayClock.innerHTML="";
-  
-  let clock= document.createElement("div");
-  
-  secondClock--;
-  
-  console.log(secondClock);
-  clock.appendChild(document.createTextNode(secondClock));
-  displayClock.appendChild(clock);
-  
-
-  if (secondClock === 0) {
-    clearInterval(timer);
-    console.log("Time's up!");
-
-  }
-
-
-
-}, 1000);
-}
