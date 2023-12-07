@@ -112,6 +112,16 @@ let dataAnswer;
 let correctAnswer;
 // -----------------------------------------------------
 
+// nascondere la welcome page
+let welcomePage = document.getElementById("welcome_page");
+let btnStartQuiz = document.getElementById("btn_proceed_quiz");
+
+btnStartQuiz.addEventListener("click", hideWelcomePage);
+
+function hideWelcomePage (){
+  welcomePage.style.display = "none";
+}
+
 
 let end = () => {
   divContent.innerHTML = "";
@@ -120,7 +130,7 @@ let end = () => {
   divContent.appendChild(paragraphQ);
 }
 
-
+// verifica delle domande e aggiunta punteggio
 let verifyAnswer = () => {
 
   dataAnswer = document.getElementsByTagName("input");
@@ -142,7 +152,7 @@ let verifyAnswer = () => {
 }
 
 
-
+// creazione dell domande
 let createPageElements = () => {
 
   for (i = 0; i < wrongAnswers.length; i++) {
@@ -176,6 +186,9 @@ let createPageElements = () => {
   divContent.appendChild(toDown);
 }
 
+
+
+// funzione per il quiz
 let timeDisplay = document.getElementById("timer_count");
 
 let branchmark = () => {
