@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&family=Prata&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&family=Prata&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* font-family: 'Outfit', sans-serif; */
+/* font-family: 'Inter', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#page_layout{
+   background-image: url(assets/bg.jpg);
+   background-repeat: no-repeat;
+   background-size: 100%;
+}
+
+#logo_img{
+    width: 150px;
+    height: auto;
+    margin: 30px 80px;
+}
+
+h1{
+    color: white;
+    margin-left: 80px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    line-height: 0.8;
+}
+
+
+h3{
+    color: #900080;
+    margin-left: 80px;
+    font-family: 'Outfit', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+#intro_text{
+    width: 550px;
+    height: auto;
+    text-wrap: wrap;
+    color: white;
+    margin-left: 80px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#list_instruction{
+    color: white;
+    margin-left: 105px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 300;
+
+}
+
+#list_instruction li{
+    padding-top: 10px;
+
+}
+
+span {
+    font-weight: 800;
+}
+
+#bottom_elements{
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#check_container{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+#check_box{
+    appearance: none;
+    border-style: solid;
+    width: 17px;
+    height: 17px;
+    border-width: 2px;
+    border-color: white;
+}
+
+#label_check{
+    color: white;
+    font-size: 13px;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+#btn_proceed_quiz{
+    color: rgb(5, 9, 71);
+    width: 200px;
+    height: 50px;
+    background-color: #00FFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 17px;
+    border: none;
+    box-shadow: 0px 0px 40px rgb(0 255 255);
+}
