@@ -110,6 +110,7 @@ let stepButton;
 let score = 0;
 let dataAnswer;
 let correctAnswer;
+let allAnswerCount = questions;
 // -----------------------------------------------------
 
 // nascondere la welcome page
@@ -189,10 +190,11 @@ let createPageElements = () => {
 
 
 // funzione per il quiz
+let countQuest = document.getElementById("count_questions");
 let timeDisplay = document.getElementById("timer_count");
 
 let branchmark = () => {
-
+  countQuest.innerHTML="";
   divContent.innerHTML = "";
   paragraphQ = document.createElement("p");
   paragraphQ.innerText = questions[count].question;
@@ -217,12 +219,41 @@ let branchmark = () => {
   stepButton.addEventListener("click", branchmark);
 
 
-let secondClock = 60;
 
-const timer = setInterval(function() {
+// display questions count
 
+let questRemaning = document.createElement("p");
+
+questRemaning.appendChild(document.createTextNode("question " + count + " / " + questions.length));
+
+countQuest.appendChild(questRemaning);
+
+
+
+}
+
+// branchmark();
+
+btnStartQuiz.addEventListener("click", clockTimer);
+let displayClock = document.getElementById("timer_count");
+
+function clockTimer(){
+
+let secondClock =;
+
+secondClock = 60;
+
+let timer = setInterval(function() {
+  displayClock.innerHTML="";
+  
+  let clock= document.createElement("div");
+  
   secondClock--;
+  
   console.log(secondClock);
+  clock.appendChild(document.createTextNode(secondClock));
+  displayClock.appendChild(clock);
+  
 
   if (secondClock === 0) {
     clearInterval(timer);
@@ -231,11 +262,6 @@ const timer = setInterval(function() {
   }
 
 
+
 }, 1000);
-
 }
-
-// branchmark();
-
-
-

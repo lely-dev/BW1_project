@@ -88,12 +88,13 @@ span {
 }
 
 #check_box{
-    appearance: none;
+    /* appearance: none; */
+    border-width: 2px;
+    border-color: white;
     border-style: solid;
     width: 17px;
     height: 17px;
-    border-width: 2px;
-    border-color: white;
+   
     cursor: pointer;
 }
 
@@ -115,4 +116,12 @@ span {
     border: none;
     box-shadow: 0px 0px 40px rgb(0 255 255);
     cursor: pointer;
+}
+
+#timer_count{
+    color: white;
+}
+
+#count_questions{
+    color: white;
 }
